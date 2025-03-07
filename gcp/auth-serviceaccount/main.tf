@@ -12,9 +12,10 @@ provider "google" {
   project = "crested-pursuit-439416-u3"
   region = "us-central1"
   zone = "us-central1-a"
+  credentials = "keys.json"    # Path to the service account key file
 }
 
 resource google_storage_bucket bucket1 {
-  name = "my-tf-bucket-up"
+  name = "my-tf-bucket-serviceaccount"
   location = "US"
 }
